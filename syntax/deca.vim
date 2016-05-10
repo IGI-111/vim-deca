@@ -36,6 +36,9 @@ hi def link decaNull Constant
 syn match decaNum /\v\d+/
 hi def link decaNum Number
 
+syn match decaFloat /\v\d+\.\d+/
+hi def link decaFloat Number
+
 syn match decaInvalidNum /\v0\d*[1-9]\d*/
 hi def link decaInvalidNum Error
 
