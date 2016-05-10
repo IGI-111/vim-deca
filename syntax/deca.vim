@@ -33,20 +33,20 @@ hi def link decaLoop Repeat
 syn keyword decaNull null
 hi def link decaNull Constant
 
-syn match decaNum '\d\+'
+syn match decaNum /\v\d+/
 hi def link decaNum Number
 
-syn match decaInvalidNum '0\d*[1-9]\d*'
+syn match decaInvalidNum /\v0\d*[1-9]\d*/
 hi def link decaInvalidNum Error
 
 syn region decaString start=/\v"/ end=/\v"/ skip=/\v\\./
 hi def link decaString String
 
 " comments
-syn match decaOneLineComment '//.*$'
+syn match decaOneLineComment /\v\/\/.*$/
 hi def link decaOneLineComment Comment
 
-syn region decaMultiLineComment start="/\*" end='\*/'
+syn region decaMultiLineComment start=/\/\*/ end=/\*\//
 hi def link decaMultiLineComment Comment
 
 let b:current_syntax = "deca"
