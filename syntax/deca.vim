@@ -14,8 +14,8 @@ syn keyword decaKeywordFunc readInt readFloat print println printlnx printx
 hi def link decaKeywordFunc Function
 
 " preprocessor-like instructions
-syn keyword decaExternal #include
-hi def link decaExternal Include
+syn match decaInclude /\v#include\s+".*"/
+hi def link decaInclude Include
 
 " conditionals
 syn keyword decaCond if else
@@ -33,14 +33,14 @@ hi def link decaLoop Repeat
 syn keyword decaNull null
 hi def link decaNull Constant
 
-syn match decaNum /\v\d+/
+syn match decaNum /\v\d+(\.\d+)?/
 hi def link decaNum Number
-
-syn match decaFloat /\v\d+\.\d+/
-hi def link decaFloat Number
 
 syn match decaInvalidNum /\v0\d*[1-9]\d*/
 hi def link decaInvalidNum Error
+
+syn match decaHex /\v0x[0-9a-fA-F]+(\.[0-9a-fA-F]+)?/
+hi def link decaHex Number
 
 syn region decaString start=/\v"/ end=/\v"/ skip=/\v\\./
 hi def link decaString String
