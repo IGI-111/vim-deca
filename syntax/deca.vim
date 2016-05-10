@@ -39,6 +39,9 @@ hi def link decaNum Number
 syn match decaInvalidNum '0\d*[1-9]\d*'
 hi def link decaInvalidNum Error
 
+syn region decaString start=/\v"/ end=/\v"/ skip=/\v\\./
+hi def link decaString String
+
 " comments
 syn match decaOneLineComment '//.*$'
 hi def link decaOneLineComment Comment
