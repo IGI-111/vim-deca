@@ -9,7 +9,7 @@ endif
 syn keyword decaOtherKeyword asm class extends instanceof new protected return this
 hi def link decaOtherKeyword Keyword
 
-" builtin functions
+" keyword functions
 syn keyword decaKeywordFunc readInt readFloat print println printlnx printx
 hi def link decaKeywordFunc Function
 
