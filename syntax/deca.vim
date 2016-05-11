@@ -13,6 +13,10 @@ hi def link decaOtherKeyword Keyword
 syn keyword decaKeywordFunc readInt readFloat print println printlnx printx
 hi def link decaKeywordFunc Function
 
+" builtin types
+syn keyword decaTypes void boolean float int
+hi def link decaTypes Type
+
 " preprocessor-like instructions
 syn match decaInclude /\v#include\s+".*"/
 hi def link decaInclude Include
